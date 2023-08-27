@@ -11,8 +11,9 @@ const GenericButton = ({ onPress, title }) => {
 const style = StyleSheet.create({
   button: {
     backgroundColor: '#dc9708',
-    padding: 8,
+    padding: 12,
     borderRadius: 5,
+    width: '100%'
   },
   title: {
     alignSelf: "center",
