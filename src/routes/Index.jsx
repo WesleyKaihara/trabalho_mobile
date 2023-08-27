@@ -1,4 +1,4 @@
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, DarkTheme } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import LoginPage from '../screens/LoginPage';
@@ -7,9 +7,19 @@ import ItemPage from '../screens/ItemPage';
 
 const Routes = () => {
   const Stack = createNativeStackNavigator();
-
+  
+  const CustomTheme = {
+    ...DarkTheme,
+    colors: {
+      ...DarkTheme.colors,
+      card: '#dc9708',
+      background: '#333',
+      text: '#222',
+    },
+  }
+  
   return (
-    <NavigationContainer>
+    <NavigationContainer theme={CustomTheme}>
       <Stack.Navigator initialRouteName="Login">
         <Stack.Screen
             name="Home"
