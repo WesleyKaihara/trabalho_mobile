@@ -22,7 +22,7 @@ const ItemCard = ({item, navigation}) => {
         >
           RARITY:
         </Text>
-        <Text style={{color: '#008cdd'}}>{item.rarity}</Text>
+        <Text style={style[item.rarity?.trim()]}>{item.rarity}</Text>
       </View>
       <GenericButton 
         title={"VISUALIZAR"}
@@ -44,6 +44,52 @@ const style = StyleSheet.create({
   },
   card_title: {
     color: '#fff'
+  },
+  rarity: {
+    fontSize: 12,
+    color: "#5e98d9"
+  },
+  HighGrade: {
+    color: "#a7b5c9"
+  },
+  Exceptional: {
+    color: "#8847ff"
+  },
+  Remarkable: {
+    color: "#8847ff"
+  },
+  Restricted: {
+    color: "#8847ff"
+  },
+  Distinguished: {
+    color: "#475ef2"
+  },
+  "Mil-Spec Grade": {
+    color: "#5e98d9"
+  },
+  IndustrialGrade: {
+    color: "#5e98d9"
+  },
+  Superior: {
+    color: "#d32ce6"
+  },
+  Classified: {
+    color: "#d32ce6"
+  },
+  Exotic: {
+    color: "#d32ce6"
+  },
+  Master: {
+    color: "#eb4b4b"
+  },
+  Covert: {
+    color: "#eb4b4b"
+  },
+  Extraordinary: {
+    color: "#eb4b4b"
+  },
+  Contraband: {
+    color: "#e4ac3a"
   }
 })
 export default ItemCard;
