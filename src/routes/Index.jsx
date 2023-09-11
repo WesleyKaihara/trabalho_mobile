@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import LoginPage from '../screens/LoginPage';
 import HomePage from '../screens/HomePage';
+import BrazilRankingNames from '../screens/BrazilRankingNames';
 import ItemPage from '../screens/ItemPage';
 import { View } from 'react-native';
 
@@ -36,6 +37,7 @@ const Routes = () => {
           options={{headerShown: false}}
         />
         <Stack.Screen name="Item Details" component={ItemPage} />
+        <Stack.Screen name="Extra" component={BrazilRankingNames} />
       </Stack.Navigator>
     </NavigationContainer>
   );

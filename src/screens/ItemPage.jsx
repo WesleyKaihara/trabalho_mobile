@@ -39,9 +39,9 @@ const ItemPage = ({ route, navigation }) => {
           <Text 
             style={{
               ...styles.rarity,
-              ...styles[data.rarity.trim()]
+              ...styles[data.rarity?.name.trim()]
             }}
-            >{data.rarity}</Text>
+            >{data.rarity?.name}</Text>
           {data.category === "Rifles" && <Rifles 
             min_float={data.min_float}
             max_float={data.max_float}
@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
   Distinguished: {
     color: "#475ef2"
   },
-  "Mil-SpecGrade": {
+  "Mil-Spec Grade": {
     color: "#5e98d9"
   },
   IndustrialGrade: {

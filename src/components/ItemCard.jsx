@@ -22,7 +22,7 @@ const ItemCard = ({item, navigation}) => {
         >
           RARITY:
         </Text>
-        <Text style={style[item.rarity?.trim()]}>{item.rarity}</Text>
+        <Text style={style[item.rarity?.name.trim()]}>{item.rarity?.name}</Text>
       </View>
       <GenericButton 
         title={"VISUALIZAR"}
